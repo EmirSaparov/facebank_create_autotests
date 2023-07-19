@@ -1,0 +1,11 @@
+version: '3'
+services:
+  autotest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./test_facebank.py:/app/test_facebank.py
+      - ./passport.png:/app/passport.png
+    environment:
+      - ENV_VARIABLE=value
